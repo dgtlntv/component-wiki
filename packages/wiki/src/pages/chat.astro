@@ -1,0 +1,19 @@
+---
+// Standalone page — no BaseLayout, no Vanilla Framework CSS.
+// Only pi-web-ui's Tailwind styles load (imported inside @wiki/agent-chat).
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Design System Chat — Component Wiki</title>
+  </head>
+  <body>
+    <div id="app" style="width: 100vw; height: 100vh;"></div>
+    <script>
+      import { createDesignSystemChat } from "@wiki/agent-chat";
+      createDesignSystemChat(document.getElementById("app")!);
+    </script>
+  </body>
+</html>

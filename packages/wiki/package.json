@@ -13,6 +13,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@wiki/agent-chat": "workspace:*",
     "@wiki/shared": "workspace:*",
     "astro": "^5.15.8",
     "lit": "^3.3.1",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
+    "@tailwindcss/vite": "^4.1.17",
     "@vitest/coverage-v8": "^4.0.18",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",

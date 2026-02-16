@@ -1,0 +1,19 @@
+{
+  "name": "@wiki/agent-chat",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@mariozechner/mini-lit": "^0.2.0",
+    "@mariozechner/pi-agent-core": "^0.52.12",
+    "@mariozechner/pi-ai": "^0.52.12",
+    "@mariozechner/pi-web-ui": "^0.52.12",
+    "@tailwindcss/vite": "^4.1.17",
+    "lit": "^3.3.1",
+    "lucide": "^0.544.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

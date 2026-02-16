@@ -1,4 +1,5 @@
 // @ts-check
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
@@ -6,6 +7,7 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 export default defineConfig({
   vite: {
     plugins: [
+      tailwindcss(),
       viteStaticCopy({
         targets: [
           {
@@ -16,6 +18,25 @@ export default defineConfig({
         ],
       }),
     ],
+    // Externalize Node-only dependencies pulled in by pi-ai's Bedrock provider.
+    // These are behind dynamic imports with runtime guards and never execute in the browser.
+    build: {
+      rollupOptions: {
+        external: [
+          "@smithy/node-http-handler",
+          "proxy-agent",
+          "@aws-sdk/client-bedrock-runtime",
+        ],
+      },
+    },
+    esbuild: {
+      tsconfigRaw: {
+        compilerOptions: {
+          useDefineForClassFields: false,
+          experimentalDecorators: true,
+        },
+      },
+    },
     css: {
       preprocessorOptions: {
         scss: {
