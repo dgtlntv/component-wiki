@@ -37,15 +37,15 @@ export default defineConfig({
         },
       },
     },
+    // Exclude Lit-based packages from Vite's dependency pre-bundling.
+    // esbuild converts class fields to __publicField() which overwrites
+    // Lit's decorator-defined property accessors, breaking reactivity.
+    // Serving these as native ESM preserves the __decorate() pattern.
     optimizeDeps: {
-      esbuildOptions: {
-        tsconfigRaw: {
-          compilerOptions: {
-            useDefineForClassFields: false,
-            experimentalDecorators: true,
-          },
-        },
-      },
+      exclude: [
+        "@mariozechner/pi-web-ui",
+        "@mariozechner/mini-lit",
+      ],
     },
     css: {
       preprocessorOptions: {
