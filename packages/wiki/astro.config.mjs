@@ -37,6 +37,16 @@ export default defineConfig({
         },
       },
     },
+    optimizeDeps: {
+      esbuildOptions: {
+        tsconfigRaw: {
+          compilerOptions: {
+            useDefineForClassFields: false,
+            experimentalDecorators: true,
+          },
+        },
+      },
+    },
     css: {
       preprocessorOptions: {
         scss: {

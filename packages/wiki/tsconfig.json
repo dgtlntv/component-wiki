@@ -1,5 +1,9 @@
 {
   "extends": "./node_modules/astro/tsconfigs/strict.json",
+  "compilerOptions": {
+    "useDefineForClassFields": false,
+    "experimentalDecorators": true
+  },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
 }
