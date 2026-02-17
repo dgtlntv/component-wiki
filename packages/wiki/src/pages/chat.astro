@@ -13,7 +13,10 @@
     <div id="app" style="width: 100vw; height: 100vh;"></div>
     <script>
       import { createDesignSystemChat } from "@wiki/agent-chat";
-      createDesignSystemChat(document.getElementById("app")!);
+      createDesignSystemChat(document.getElementById("app")!).catch((err) => {
+        console.error("Failed to initialize chat:", err);
+        document.getElementById("app")!.innerText = "Failed to load chat: " + err.message;
+      });
     </script>
   </body>
 </html>
