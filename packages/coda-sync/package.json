@@ -20,7 +20,7 @@
     "openapi-typescript": "^7.10.1",
     "tsx": "^4.19.0",
     "typescript": "^5.0.0",
-    "vitest": "^4.0.18"
+    "vitest": "^4.1.0"
   },
   "dependencies": {
     "cheerio": "^1.1.2",
