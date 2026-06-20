@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@wiki/shared": "workspace:*",
-    "astro": "^5.15.8",
+    "astro": "^6.4.6",
     "astro-purgecss": "^5.5.0",
     "lit": "^3.3.1",
     "marked": "^17.0.2",
