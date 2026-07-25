@@ -24,7 +24,7 @@
     "marked": "^17.0.2",
     "purgecss": "^7.0.2",
     "sass": "^1.94.0",
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.0",
     "vanilla-framework": "^4.37.0"
   },
   "devDependencies": {
